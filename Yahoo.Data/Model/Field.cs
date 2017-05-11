@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Yahoo.Data
+namespace Yahoo.Data.Model
 {
     [XmlRoot(ElementName = "field")]
     public class Field

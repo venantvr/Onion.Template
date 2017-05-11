@@ -6,7 +6,7 @@
 
 using System.Xml.Serialization;
 
-namespace Yahoo.Data
+namespace Yahoo.Data.Model
 {
     [XmlRoot(ElementName = "meta")]
     public class Meta

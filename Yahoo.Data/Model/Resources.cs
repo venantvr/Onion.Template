@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace Yahoo.Data
+namespace Yahoo.Data.Model
 {
     [XmlRoot(ElementName = "resources")]
     public class Resources

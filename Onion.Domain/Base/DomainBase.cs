@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Yahoo.Data;
+using Yahoo.Data.Interfaces;
 
 namespace Onion.Domain.Base
 {
