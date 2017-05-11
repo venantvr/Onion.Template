@@ -11,7 +11,7 @@ namespace Yahoo.Data
 {
     public class Service
     {
-        public object Deserialize(string xml, Type toType)
+        private object Deserialize(string xml, Type toType)
         {
             using (Stream stream = new MemoryStream())
             {

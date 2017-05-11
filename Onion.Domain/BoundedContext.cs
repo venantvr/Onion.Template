@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Onion.Domain.Base;
 using Onion.Domain.Dtos;
 using Onion.Domain.Notifications;
-using Yahoo.Data;
+using Yahoo.Data.Interfaces;
 
 namespace Onion.Domain
 {

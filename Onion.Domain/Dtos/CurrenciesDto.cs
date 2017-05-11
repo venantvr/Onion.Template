@@ -1,4 +1,4 @@
-﻿using Yahoo.Data;
+﻿using Yahoo.Data.Interfaces;
 
 namespace Onion.Domain.Dtos
 {
