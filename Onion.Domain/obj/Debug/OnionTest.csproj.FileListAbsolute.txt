@@ -1,0 +1,7 @@
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\OnionTest\bin\Debug\OnionTest.dll
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\OnionTest\bin\Debug\OnionTest.pdb
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\OnionTest\obj\Debug\OnionTest.dll
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\OnionTest\obj\Debug\OnionTest.pdb
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\OnionTest\obj\Debug\OnionTest.csprojResolveAssemblyReference.cache
+C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\OnionTest\bin\Debug\Yahoo.Data.dll
+C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\OnionTest\bin\Debug\Yahoo.Data.pdb

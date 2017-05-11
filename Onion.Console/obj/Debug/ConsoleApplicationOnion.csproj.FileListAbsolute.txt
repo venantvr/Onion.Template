@@ -1,0 +1,10 @@
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\ConsoleApplicationOnion.exe.config
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\ConsoleApplicationOnion.exe
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\ConsoleApplicationOnion.pdb
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\OnionTest.dll
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\OnionTest.pdb
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\obj\Debug\ConsoleApplicationOnion.csprojResolveAssemblyReference.cache
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\obj\Debug\ConsoleApplicationOnion.exe
+c:\users\renald\documents\visual studio 2015\Projects\OnionTest\ConsoleApplicationOnion\obj\Debug\ConsoleApplicationOnion.pdb
+C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\Yahoo.Data.dll
+C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\ConsoleApplicationOnion\bin\Debug\Yahoo.Data.pdb
