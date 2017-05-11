@@ -7,6 +7,8 @@ using System.Transactions;
 using System.Xml.Serialization;
 using Onion.Console.Persistence;
 using Onion.Domain;
+using Onion.Domain.Dtos;
+using Onion.Domain.Notifications;
 using Yahoo.Data;
 
 namespace Onion.Console
@@ -83,11 +85,6 @@ namespace Onion.Console
             }
         }
 
-        //public Infrastructure Init()
-        //{
-        //    return this;
-        //}
-
         public BootStrapper SetExternalDataSources()
         {
             _domain = _domain
@@ -113,11 +110,9 @@ namespace Onion.Console
             return this;
         }
 
-        public BootStrapper Execute(Func<BoundedContext, bool> func)
+        public void Execute(Func<BoundedContext, bool> func)
         {
             _func = func;
-
-            return this;
         }
     }
 }

@@ -43,17 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CurrenciesDto.cs" />
+    <Compile Include="Dtos\CurrenciesDto.cs" />
     <Compile Include="Base\DomainBase.cs" />
-    <Compile Include="EntityNotification.cs" />
-    <Compile Include="EventNotification.cs" />
+    <Compile Include="Notifications\EntityNotification.cs" />
+    <Compile Include="Notifications\EventNotification.cs" />
     <Compile Include="BoundedContext.cs" />
     <Compile Include="Base\NotificationBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\YahooData\Yahoo.Data.csproj">
-      <Project>{f40830bb-8465-455e-aa4d-efac53c6dbbc}</Project>
+    <ProjectReference Include="..\Yahoo.Data\Yahoo.Data.csproj">
+      <Project>{F40830BB-8465-455E-AA4D-EFAC53C6DBBC}</Project>
       <Name>Yahoo.Data</Name>
     </ProjectReference>
   </ItemGroup>

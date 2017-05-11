@@ -1,5 +1,0 @@
-c:\users\renald\documents\visual studio 2015\Projects\OnionTest\YahooData\bin\Debug\YahooData.dll
-c:\users\renald\documents\visual studio 2015\Projects\OnionTest\YahooData\bin\Debug\YahooData.pdb
-c:\users\renald\documents\visual studio 2015\Projects\OnionTest\YahooData\obj\Debug\YahooData.csprojResolveAssemblyReference.cache
-c:\users\renald\documents\visual studio 2015\Projects\OnionTest\YahooData\obj\Debug\YahooData.dll
-c:\users\renald\documents\visual studio 2015\Projects\OnionTest\YahooData\obj\Debug\YahooData.pdb

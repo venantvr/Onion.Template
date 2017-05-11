@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure.cs" />
+    <Compile Include="BootStrapper.cs" />
     <Compile Include="Persistence\IPersistenceLogic.cs" />
     <Compile Include="Persistence\MongoDbLogic.cs" />
     <Compile Include="Persistence\SqlServerLogic.cs" />
@@ -58,11 +59,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OnionTest\Onion.Domain.csproj">
-      <Project>{e01f97e3-f43d-4a35-a291-307115db2618}</Project>
+    <ProjectReference Include="..\Onion.Domain\Onion.Domain.csproj">
+      <Project>{E01F97E3-F43D-4A35-A291-307115DB2618}</Project>
       <Name>Onion.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YahooData\Yahoo.Data.csproj">
+    <ProjectReference Include="..\Yahoo.Data\Yahoo.Data.csproj">
       <Project>{F40830BB-8465-455E-AA4D-EFAC53C6DBBC}</Project>
       <Name>Yahoo.Data</Name>
     </ProjectReference>

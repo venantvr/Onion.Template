@@ -4,7 +4,11 @@
     {
         private static void Main(string[] args)
         {
-            new Infrastructure().Init();
+            new BootStrapper()
+                .SetExternalDataSources()
+                .SetInternalStorage()
+                .SetServiceBus()
+                .Execute(d => d.Process());
         }
     }
 }

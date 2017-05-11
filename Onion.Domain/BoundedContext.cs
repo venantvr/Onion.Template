@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Onion.Domain.Base;
+using Onion.Domain.Dtos;
+using Onion.Domain.Notifications;
 using Yahoo.Data;
 
 namespace Onion.Domain
