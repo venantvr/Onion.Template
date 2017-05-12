@@ -13,8 +13,9 @@ namespace Onion.Console
     public class BootStrapper
     {
         private BoundedContext _boundedContext;
-        private UnitOfWork<EntityNotification> _entityUoW;
-        private UnitOfWork<EventNotification> _eventUoW;
+        // Not really a UoW, contains repos...
+        private UnitOfWork<EntityNotification> _entitiesUoW;
+        private UnitOfWork<EventNotification> _eventsUoW;
         private ServiceBus _serviceBus;
 
         // Bootstrap
@@ -35,8 +36,8 @@ namespace Onion.Console
 
         public BootStrapper SetInternalStorage()
         {
-            _eventUoW = new UnitOfWork<EventNotification>(new SqlServerLogic()).Take(d => d.Events);
-            _entityUoW = new UnitOfWork<EntityNotification>(new MongoDbLogic()).Take(d => d.Entities);
+            _eventsUoW = new UnitOfWork<EventNotification>(new SqlServerLogic()).Take(d => d.Events);
+            _entitiesUoW = new UnitOfWork<EntityNotification>(new MongoDbLogic()).Take(d => d.Entities);
 
             return this;
         }
@@ -61,7 +62,7 @@ namespace Onion.Console
                 // Transaction à porter dans les UoW
                 using (var transaction = new TransactionScope())
                 {
-                    if (_entityUoW.Persist(_boundedContext) && _eventUoW.Persist(_boundedContext))
+                    if (_entitiesUoW.Persist(_boundedContext) && _eventsUoW.Persist(_boundedContext))
                     {
                         transaction.Complete();
                     }
