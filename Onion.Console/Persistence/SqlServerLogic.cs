@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Onion.Domain.Base;
 
 namespace Onion.Console.Persistence
@@ -8,6 +9,11 @@ namespace Onion.Console.Persistence
         public bool Store(ReadOnlyCollection<NotificationBase> items)
         {
             return true;
+        }
+
+        public List<NotificationBase> Retrieve()
+        {
+            return new List<NotificationBase>();
         }
     }
 }

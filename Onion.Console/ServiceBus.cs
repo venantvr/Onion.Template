@@ -1,28 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 using Onion.Domain;
-using Onion.Domain.Notifications;
 
 namespace Onion.Console
 {
     public class ServiceBus
     {
         private bool _acknowledgement;
+        private Func<BoundedContext, IReadOnlyCollection<Guid>> _eventUids;
+
+        //[Obsolete]
+        //public void Send(BoundedContext boundedContext)
+        //{
+        //    foreach (var @event in boundedContext.Events)
+        //    {
+        //        if (_acknowledgement)
+        //        {
+        //        }
+        //    }
+        //}
 
         public void Send(BoundedContext boundedContext)
         {
-            foreach (var @event in boundedContext.Events)
+            // ReSharper disable once UnusedVariable
+            foreach (var @event in _eventUids.Invoke(boundedContext))
             {
                 if (_acknowledgement)
                 {
+                    // Retrieve from database...
+                    // Send
                 }
             }
         }
 
-        public ServiceBus Take(Func<BoundedContext, IReadOnlyCollection<EventNotification>> events)
+        public ServiceBus Take(Func<BoundedContext, IReadOnlyCollection<Guid>> eventUids)
         {
+            _eventUids = eventUids;
+
             return this;
         }
+
+        //public ServiceBus Take(Func<BoundedContext, IReadOnlyCollection<EventNotification>> events)
+        //{
+        //    return this;
+        //}
 
         public ServiceBus WithAcknowledgement()
         {
@@ -31,6 +52,7 @@ namespace Onion.Console
             return this;
         }
 
+        // ReSharper disable once UnusedMember.Global
         public ServiceBus WithoutAcknowledgement()
         {
             _acknowledgement = false;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Onion.Console.Persistence;
@@ -20,6 +21,11 @@ namespace Onion.Console
 
         public void Dispose()
         {
+        }
+
+        internal List<TNotification> Retrieve()
+        {
+            return _logic.Retrieve().Cast<TNotification>().ToList();
         }
 
         internal bool Persist(BoundedContext boundedContext)
