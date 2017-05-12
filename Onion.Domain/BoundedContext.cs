@@ -7,7 +7,7 @@ using Yahoo.Data.Interfaces;
 
 namespace Onion.Domain
 {
-    public class BoundedContext : DomainBase<EntityNotification, EventNotification>
+    public class BoundedContext : DomainBase<DomainEntity, DomainEvent>
     {
         private BoundedContext()
         {

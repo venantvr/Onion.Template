@@ -14,8 +14,8 @@ namespace Onion.Console
     {
         private BoundedContext _boundedContext;
         // Not really a UoW, contains repos...
-        private UnitOfWork<EntityNotification> _entitiesUoW;
-        private UnitOfWork<EventNotification> _eventsUoW;
+        private UnitOfWork<DomainEntity> _entitiesUoW;
+        private UnitOfWork<DomainEvent> _eventsUoW;
         private ServiceBus _serviceBus;
 
         // Bootstrap
@@ -36,8 +36,8 @@ namespace Onion.Console
 
         public BootStrapper SetInternalStorage()
         {
-            _eventsUoW = new UnitOfWork<EventNotification>(new SqlServerLogic()).Take(d => d.Events);
-            _entitiesUoW = new UnitOfWork<EntityNotification>(new MongoDbLogic()).Take(d => d.Entities);
+            _eventsUoW = new UnitOfWork<DomainEvent>(new SqlServerLogic()).Take(d => d.Events);
+            _entitiesUoW = new UnitOfWork<DomainEntity>(new MongoDbLogic()).Take(d => d.Entities);
 
             return this;
         }

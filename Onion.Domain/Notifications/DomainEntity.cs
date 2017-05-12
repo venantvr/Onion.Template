@@ -3,7 +3,7 @@
 namespace Onion.Domain.Notifications
 {
     // ReSharper disable once ClassNeverInstantiated.Global
-    public class EntityNotification : NotificationBase
+    public class DomainEntity : DomainObjectBase
     {
     }
 }

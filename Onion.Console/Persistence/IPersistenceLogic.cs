@@ -7,7 +7,7 @@ namespace Onion.Console.Persistence
     public interface IPersistenceLogic
     {
         // ReSharper disable once UnusedParameter.Global
-        bool Store(ReadOnlyCollection<NotificationBase> items);
-        List<NotificationBase> Retrieve();
+        bool Store(ReadOnlyCollection<DomainObjectBase> items);
+        List<DomainObjectBase> Retrieve();
     }
 }

@@ -6,14 +6,14 @@ namespace Onion.Console.Persistence
 {
     public class MongoDbLogic : IPersistenceLogic
     {
-        public bool Store(ReadOnlyCollection<NotificationBase> items)
+        public bool Store(ReadOnlyCollection<DomainObjectBase> items)
         {
             return true;
         }
 
-        public List<NotificationBase> Retrieve()
+        public List<DomainObjectBase> Retrieve()
         {
-            return new List<NotificationBase>();
+            return new List<DomainObjectBase>();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Onion.Domain.Base
 {
-    public class NotificationBase
+    public class DomainObjectBase
     {
     }
 }

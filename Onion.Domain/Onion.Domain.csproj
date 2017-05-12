@@ -45,10 +45,10 @@
   <ItemGroup>
     <Compile Include="Dtos\CurrenciesDto.cs" />
     <Compile Include="Base\DomainBase.cs" />
-    <Compile Include="Notifications\EntityNotification.cs" />
-    <Compile Include="Notifications\EventNotification.cs" />
+    <Compile Include="Notifications\DomainEntity.cs" />
+    <Compile Include="Notifications\DomainEvent.cs" />
     <Compile Include="BoundedContext.cs" />
-    <Compile Include="Base\NotificationBase.cs" />
+    <Compile Include="Base\DomainObjectBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

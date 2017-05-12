@@ -32,7 +32,7 @@ namespace Onion.Console
         {
             _domainNotifications = _domainFunc.Invoke(boundedContext);
 
-            return _logic.Store(_domainNotifications.Cast<NotificationBase>().ToList().AsReadOnly());
+            return _logic.Store(_domainNotifications.Cast<DomainObjectBase>().ToList().AsReadOnly());
         }
 
         public UnitOfWork<TNotification> Take(Func<BoundedContext, ReadOnlyCollection<TNotification>> func)
