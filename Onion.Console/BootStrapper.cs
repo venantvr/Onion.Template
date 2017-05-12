@@ -36,6 +36,7 @@ namespace Onion.Console
 
         public BootStrapper SetInternalStorage()
         {
+            // Loads BC definitions that will be later persisted...
             _eventsUoW = new UnitOfWork<DomainEvent>(new SqlServerLogic()).Take(d => d.Events);
             _entitiesUoW = new UnitOfWork<DomainEntity>(new MongoDbLogic()).Take(d => d.Entities);
 
