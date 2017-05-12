@@ -70,6 +70,7 @@ namespace Onion.Console
                 }
 
                 // If everything is OK, returns to the database and play persisted notifications...
+                // TODO : Separate Storage from Events
                 _serviceBus
                     .WithAcknowledgement()
                     .Send(_boundedContext);

@@ -9,6 +9,7 @@ using Yahoo.Data.Model;
 
 namespace Yahoo.Data
 {
+    // TODO : Refactor...
     public class Service
     {
         private object Deserialize(string xml, Type toType)
