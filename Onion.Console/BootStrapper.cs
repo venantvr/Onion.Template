@@ -51,13 +51,13 @@ namespace Onion.Console
 
         public void Execute(Func<BoundedContext, bool> func)
         {
-            // Breaks all if any error occurs
+            // Breaks if any error occurs
             try
             {
                 // Starting the process
                 func.Invoke(_boundedContext);
 
-                // Create a TransactionScope (if possible, more stuff is needed depending on storage runtimes...)
+                // Creating a TransactionScope (if possible, more stuff is needed depending on storage runtimes...)
                 // Transaction à porter dans les UoW
                 using (var transaction = new TransactionScope())
                 {

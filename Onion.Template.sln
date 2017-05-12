@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Console", "Onion.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yahoo.Data", "Yahoo.Data\Yahoo.Data.csproj", "{F40830BB-8465-455E-AA4D-EFAC53C6DBBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onion.Test", "Onion.Test\Onion.Test.csproj", "{BC433038-856B-441F-B2AE-D306BC8C9031}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4F565954-1C68-4CA4-9D27-2ACDBF5DA1B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,15 @@ Global
 		{F40830BB-8465-455E-AA4D-EFAC53C6DBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F40830BB-8465-455E-AA4D-EFAC53C6DBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F40830BB-8465-455E-AA4D-EFAC53C6DBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC433038-856B-441F-B2AE-D306BC8C9031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC433038-856B-441F-B2AE-D306BC8C9031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC433038-856B-441F-B2AE-D306BC8C9031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC433038-856B-441F-B2AE-D306BC8C9031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC433038-856B-441F-B2AE-D306BC8C9031} = {4F565954-1C68-4CA4-9D27-2ACDBF5DA1B7}
 	EndGlobalSection
 EndGlobal

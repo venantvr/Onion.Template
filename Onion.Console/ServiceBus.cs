@@ -9,17 +9,6 @@ namespace Onion.Console
         private bool _acknowledgement;
         private Func<BoundedContext, IReadOnlyCollection<Guid>> _eventUids;
 
-        //[Obsolete]
-        //public void Send(BoundedContext boundedContext)
-        //{
-        //    foreach (var @event in boundedContext.Events)
-        //    {
-        //        if (_acknowledgement)
-        //        {
-        //        }
-        //    }
-        //}
-
         public void Send(BoundedContext boundedContext)
         {
             // ReSharper disable once UnusedVariable
@@ -39,11 +28,6 @@ namespace Onion.Console
 
             return this;
         }
-
-        //public ServiceBus Take(Func<BoundedContext, IReadOnlyCollection<EventNotification>> events)
-        //{
-        //    return this;
-        //}
 
         public ServiceBus WithAcknowledgement()
         {
