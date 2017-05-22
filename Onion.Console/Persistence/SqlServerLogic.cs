@@ -8,11 +8,13 @@ namespace Onion.Console.Persistence
     {
         public bool Store(ReadOnlyCollection<DomainObjectBase> items)
         {
+            // Todo...
             return true;
         }
 
         public List<DomainObjectBase> Retrieve()
         {
+            // Todo...
             return new List<DomainObjectBase>();
         }
     }

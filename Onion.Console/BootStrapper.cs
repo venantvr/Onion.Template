@@ -13,9 +13,8 @@ namespace Onion.Console
     public class BootStrapper
     {
         private BoundedContext _boundedContext;
-        // Not really a UoW, contains repos...
-        private UnitOfWork<DomainEntity> _entitiesUoW;
-        private UnitOfWork<DomainEvent> _eventsUoW;
+        private DatabaseContext<DomainEntity> _entitiesContext;
+        private DatabaseContext<DomainEvent> _eventsContext;
         private ServiceBus _serviceBus;
 
         // Bootstrap
@@ -37,8 +36,8 @@ namespace Onion.Console
         public BootStrapper SetInternalStorage()
         {
             // Loads BC definitions that will be later persisted...
-            _eventsUoW = new UnitOfWork<DomainEvent>(new SqlServerLogic()).Take(d => d.Events);
-            _entitiesUoW = new UnitOfWork<DomainEntity>(new MongoDbLogic()).Take(d => d.Entities);
+            _eventsContext = new DatabaseContext<DomainEvent>(new SqlServerLogic()).Take(d => d.Events);
+            _entitiesContext = new DatabaseContext<DomainEntity>(new MongoDbLogic()).Take(d => d.Entities);
 
             return this;
         }
@@ -53,17 +52,17 @@ namespace Onion.Console
 
         public void Execute(Func<BoundedContext, bool> func)
         {
-            // Breaks if any error occurs
+            // Breaks if a critical error occurs
             try
             {
-                // Starting the process
+                // Starts the process
                 func.Invoke(_boundedContext);
 
-                // Creating a TransactionScope (if possible, more stuff is needed depending on storage runtimes...)
-                // Transaction à porter dans les UoW
+                // Creates a TransactionScope (if possible, more stuff is needed depending on storage runtimes...)
+                // Transactions should be the responsability of each context
                 using (var transaction = new TransactionScope())
                 {
-                    if (_entitiesUoW.Persist(_boundedContext) && _eventsUoW.Persist(_boundedContext))
+                    if (_entitiesContext.Persist(_boundedContext) && _eventsContext.Persist(_boundedContext))
                     {
                         transaction.Complete();
                     }

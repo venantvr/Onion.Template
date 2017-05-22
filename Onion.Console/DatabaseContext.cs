@@ -8,13 +8,13 @@ using Onion.Domain.Base;
 
 namespace Onion.Console
 {
-    internal class UnitOfWork<TNotification> : IDisposable
+    internal class DatabaseContext<TNotification> : IDisposable
     {
         private readonly IPersistenceLogic _logic;
         private Func<BoundedContext, ReadOnlyCollection<TNotification>> _domainFunc;
         private ReadOnlyCollection<TNotification> _domainNotifications;
 
-        public UnitOfWork(IPersistenceLogic logic)
+        public DatabaseContext(IPersistenceLogic logic)
         {
             _logic = logic;
         }
@@ -35,7 +35,7 @@ namespace Onion.Console
             return _logic.Store(_domainNotifications.Cast<DomainObjectBase>().ToList().AsReadOnly());
         }
 
-        public UnitOfWork<TNotification> Take(Func<BoundedContext, ReadOnlyCollection<TNotification>> func)
+        public DatabaseContext<TNotification> Take(Func<BoundedContext, ReadOnlyCollection<TNotification>> func)
         {
             _domainFunc = func;
 
