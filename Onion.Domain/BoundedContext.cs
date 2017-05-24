@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Onion.Domain.Base;
+﻿using Onion.Domain.Base;
 using Onion.Domain.Dtos;
 using Onion.Domain.Notifications;
 using Yahoo.Data.Interfaces;
@@ -9,13 +7,15 @@ namespace Onion.Domain
 {
     public class BoundedContext : DomainBase<DomainEntity, DomainEvent>
     {
+        private IDtoObject _currencies;
+
         private BoundedContext()
         {
         }
 
         public bool Process()
         {
-            var currencies = RestInvokers[typeof (CurrenciesDto)].Invoke(1);
+            _currencies = RestInvokers[typeof (CurrenciesDto)].Invoke(1);
 
             return true;
         }
@@ -23,20 +23,6 @@ namespace Onion.Domain
         public static BoundedContext CreateUseCase()
         {
             return new BoundedContext();
-        }
-
-        public BoundedContext WithInvokerAsync<T>(Func<int, Task<IDtoObject>> p) where T : IDtoObject
-        {
-            RestInvokersAsync.Add(typeof (T), p);
-
-            return this;
-        }
-
-        public BoundedContext WithInvoker<T>(Func<int, IDtoObject> p) where T : IDtoObject
-        {
-            RestInvokers.Add(typeof (T), p);
-
-            return this;
         }
     }
 }

@@ -22,5 +22,19 @@ namespace Onion.Domain.Base
 
         public ReadOnlyCollection<TEntities> Entities => _entities.AsReadOnly();
         public ReadOnlyCollection<TEvents> Events => _events.AsReadOnly();
+
+        public DomainBase<TEntities, TEvents> WithInvokerAsync<T>(Func<int, Task<IDtoObject>> p) where T : IDtoObject
+        {
+            RestInvokersAsync.Add(typeof (T), p);
+
+            return this;
+        }
+
+        public DomainBase<TEntities, TEvents> WithInvoker<T>(Func<int, IDtoObject> p) where T : IDtoObject
+        {
+            RestInvokers.Add(typeof (T), p);
+
+            return this;
+        }
     }
 }
