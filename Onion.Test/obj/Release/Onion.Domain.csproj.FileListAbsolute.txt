@@ -1,7 +1,0 @@
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\bin\Release\Onion.Domain.dll
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\bin\Release\Onion.Domain.pdb
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\bin\Release\Yahoo.Data.dll
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\bin\Release\Yahoo.Data.pdb
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\obj\Release\Onion.Domain.csprojResolveAssemblyReference.cache
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\obj\Release\Onion.Domain.dll
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Onion.Domain\obj\Release\Onion.Domain.pdb
