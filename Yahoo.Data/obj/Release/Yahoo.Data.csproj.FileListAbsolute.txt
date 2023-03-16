@@ -1,4 +1,0 @@
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Yahoo.Data\bin\Release\Yahoo.Data.dll
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Yahoo.Data\bin\Release\Yahoo.Data.pdb
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Yahoo.Data\obj\Release\Yahoo.Data.dll
-C:\Users\renald\Documents\Visual Studio 2015\Projects\OnionTest\Yahoo.Data\obj\Release\Yahoo.Data.pdb
