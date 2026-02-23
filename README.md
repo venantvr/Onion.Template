@@ -15,8 +15,4 @@ Template d'architecture Onion en .NET : domaine avec bounded contexts, persistan
 
 ## Stack
 
-- C# / .NET
-- Architecture Onion
-- MongoDB
-- SQL Server
-- Bus d'evenements
+[![Stack](https://skillicons.dev/icons?i=dotnet,mongodb,cs,go&theme=dark)](https://skillicons.dev)
