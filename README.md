@@ -15,4 +15,4 @@ Template d'architecture Onion en .NET : domaine avec bounded contexts, persistan
 
 ## Stack
 
-[![Stack](https://skillicons.dev/icons?i=dotnet,mongodb,cs,go&theme=dark)](https://skillicons.dev)
+[![Stack](https://skillicons.dev/icons?i=cs,dotnet,mongodb&theme=dark)](https://skillicons.dev)
